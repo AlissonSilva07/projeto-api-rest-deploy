@@ -13,6 +13,7 @@ public class Workstation {
     private String descricao;
     @Column(unique = true)
     private String patrimonio;
+    @Enumerated(EnumType.STRING)
     private SetorEnum setor;
     @OneToOne(cascade = CascadeType.ALL)
     private Specs specs;
@@ -47,6 +48,14 @@ public class Workstation {
 
     public void setPatrimonio(String patrimonio) {
         this.patrimonio = patrimonio;
+    }
+
+    public SetorEnum getSetor() {
+        return setor;
+    }
+
+    public void setSetor(SetorEnum setor) {
+        this.setor = setor;
     }
 
     public Specs getSpecs() {

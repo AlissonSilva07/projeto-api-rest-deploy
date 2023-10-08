@@ -10,7 +10,9 @@ public class Processador {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_processador")
     private Long id;
+    @Enumerated(EnumType.STRING)
     private PlataformaEnum plataforma;
+    @Enumerated(EnumType.STRING)
     private FamiliaIntelEnum familia;
     private String modelo;
 
