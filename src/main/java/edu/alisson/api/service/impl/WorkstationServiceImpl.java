@@ -5,6 +5,7 @@ import edu.alisson.api.repository.WorkstationRepository;
 import edu.alisson.api.service.WorkstationService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -14,6 +15,11 @@ public class WorkstationServiceImpl implements WorkstationService {
 
     public WorkstationServiceImpl(WorkstationRepository workstationRepository) {
         this.workstationRepository = workstationRepository;
+    }
+
+    @Override
+    public List<Workstation> buscarTodos() {
+        return workstationRepository.findAll();
     }
 
     @Override

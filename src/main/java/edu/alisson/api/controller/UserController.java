@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/workstation")
@@ -17,6 +18,11 @@ public class UserController {
         this.workstationService = workstationService;
     }
 
+    @GetMapping
+    public ResponseEntity<List<Workstation>> procurarTodos() {
+        var workstations = workstationService.buscarTodos();
+        return ResponseEntity.ok(workstations);
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Workstation> procurarPorId(@PathVariable Long id) {
         var workstation = workstationService.buscarPorId(id);
