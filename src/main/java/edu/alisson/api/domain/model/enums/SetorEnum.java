@@ -1,6 +1,7 @@
 package edu.alisson.api.domain.model.enums;
 
 public enum SetorEnum {
+    DEFAULT("Default"),
     ADP("ADP"),
     ATENDIMENTO("ATENDIMENTO"),
     CAIXA("CAIXA"),

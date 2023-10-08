@@ -8,4 +8,6 @@ public interface WorkstationService {
     List<Workstation> buscarTodos();
     Workstation buscarPorId(Long id);
     Workstation criar(Workstation workstationParaCriar);
+    void atualizar(Long id, Workstation workstation);
+    void deletar(Long id);
 }

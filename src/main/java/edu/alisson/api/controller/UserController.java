@@ -38,4 +38,16 @@ public class UserController {
                 .toUri();
         return ResponseEntity.created(location).body(workstationCreated);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Workstation> atualizar(@PathVariable Long id, @RequestBody Workstation workstation) {
+        workstationService.atualizar(id, workstation);
+        return ResponseEntity.ok(workstation);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
+        workstationService.deletar(id);
+        return ResponseEntity.ok().build();
+    }
 }

@@ -1,6 +1,7 @@
 package edu.alisson.api.domain.model.enums;
 
 public enum FamiliaIntelEnum {
+    DEFAULT("Default"),
     CELERON("Celeron"),
     PENTIUM("Pentium"),
     INTEL_CORE_I3("Intel Core i3"),

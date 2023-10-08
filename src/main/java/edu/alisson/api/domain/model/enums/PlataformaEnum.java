@@ -3,6 +3,7 @@ package edu.alisson.api.domain.model.enums;
 import java.security.PublicKey;
 
 public enum PlataformaEnum {
+    DEFAULT("Default"),
     INTEL("Intel"),
     AMD("AMD");
 
