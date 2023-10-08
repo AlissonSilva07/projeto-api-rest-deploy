@@ -1,17 +1,27 @@
 package edu.alisson.api.domain.model;
 
+import edu.alisson.api.domain.model.enums.SetorEnum;
+import jakarta.persistence.*;
+
+@Entity(name = "tb_workstation")
 public class Workstation {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_workstation")
+    private Long id;
     private String titulo;
     private String descricao;
+    @Column(unique = true)
     private String patrimonio;
+    private SetorEnum setor;
+    @OneToOne(cascade = CascadeType.ALL)
     private Specs specs;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
