@@ -25,6 +25,6 @@ classDiagram
     +modelo: string
   }
 
-  Workstation --|> Specs : contains
-  Specs --|> Processador : has
+  Workstation "1" *-- "1" Specs : contains
+  Specs "1" *-- "1" Processador : has
 ```
