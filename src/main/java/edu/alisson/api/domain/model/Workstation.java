@@ -50,8 +50,8 @@ public class Workstation {
         this.patrimonio = patrimonio;
     }
 
-    public SetorEnum getSetor() {
-        return setor;
+    public String getSetor() {
+        return setor.getDescricao();
     }
 
     public void setSetor(SetorEnum setor) {
