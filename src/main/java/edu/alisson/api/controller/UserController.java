@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/workstation")
+@CrossOrigin(origins = "*")
 public class UserController {
     private final WorkstationService workstationService;
 
